@@ -1,66 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hojune Lee's academic website">
   <title>Hojune Lee</title>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <h1 class="site-title"><a href="index.html">Hojune Lee</a></h1>
-      <nav>
-        <ul class="site-nav">
-          <li><a href="index.html" aria-current="page">About Me</a></li>
-          <li><a href="music/index.html">My Playlist</a></li>
-          <li><a href="courses/index.html">Selected Courses</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="site-header container">
+    <a class="site-name" href="index.html">Hojune Lee</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="site-nav" aria-label="주요 메뉴">
+      <a href="index.html" aria-current="page">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="courses/index.html">Courses</a>
+      <a href="music/index.html">Music</a>
+    </nav>
   </header>
 
-  <main>
-    <div class="wrap">
-      <section class="section intro-block">
-        <h1>이호준(Hojune Lee)</h1>
-        <p class="subtitle">KAIST B.S. in Computer Science and Mathematics</p>
-        <div class="bio">
-          <p>
-            temp
-          </p>
-          <h2>Research Interests</h2>
-          <p>
-            Algorithm, Graphs, Lean with Dependent Type Theory, Formal Verification, Programming Language, Mathematics
-          </p>
-          <h2>Hobbies</h2>
-          <p>
-            Drum, Band Music, Writing, Swimming, Weight Training
-          </p>
+  <main class="container">
+    <section class="intro">
+      <div class="intro-main">
+        <p class="kicker">KAIST · Computer Science & Mathematics</p>
+        <h1>이호준 <span>Hojune Lee</span></h1>
+        <p class="lead">I enjoy mathematics and music in many forms. In my spare time, I play the drums and swim. </p>
+        <div class="link-list" aria-label="외부 링크">
+          <a href="mailto:hojunelee@kaist.ac.kr">Email</a>
+          <a href="https://github.com/hojune-lee" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://blog.naver.com/maxio_" target="_blank" rel="noopener">Blog</a>
+          <a href="cv.pdf">CV</a>
         </div>
+      </div>
+    </section>
 
-        <h2>CV</h2>
-        <a href="cv.pdf" class="btn" download>Download CV (PDF)</a>
-        <p style="margin-top:0.5rem; font-size:0.9rem; color:var(--text-muted);">
-        </p>
+    <section id="research" class="page-section">
+      <div class="section-label"><span>01</span><h2>Research interests</h2></div>
+      <div class="section-content">
+        <ul class="interest-list">
+          <li><span>Quantum Information Theory</span><div class="interest-body"><p>Representation Theory for Quantum, Clifford Group</p><div class="research-resources"><p>References</p><a href="https://link.springer.com/book/10.1007/978-3-319-44906-7">Representation Theory <span>PDF ↗</span></a><a href="https://arxiv.org/abs/2003.09412">Clifford Generation <span>PDF ↗</span></a></div></div></li>
+          <li><span>Quantum Cryptography</span><div class="interest-body"><p></p><div class="research-resources"><p>References</p><a href="#">Reference title <span>Link ↗</span></a></div></div></li>
+          <li><span>Cryptography</span><div class="interest-body"><p></p><div class="research-resources"><p>References</p><a href="#">Trapdoored Matrices <span>Link ↗</span></a></div></div></li>
+          <li><span>Mathematics</span><div class="interest-body"><p></p><div class="research-resources"><p>References</p><a href="#">Symplectic Geometry <span>Link ↗</span></a></div></div></li>
+        </ul>
+      </div>
+    </section>
 
-        <h2>Links</h2>
-        <div class="link-row">
-          <a href="https://github.com/hojune-lee" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://blog.naver.com/maxio_" class="btn btn-outline" target="_blank" rel="noopener">네이버 블로그</a>
-        </div>
-        <p style="margin-top:0.5rem; font-size:0.9rem; color:var(--text-muted);">
-        </p>
-      </section>
-    </div>
+    <section id="publications" class="page-section">
+      <div class="section-label"><span>02</span><h2>Publications</h2></div>
+      <div class="section-content publication-list">
+        <article class="publication">
+          <p class="pub-year">2026</p>
+          <!-- <div><h3>Paper title</h3><p><strong>Hojune Lee</strong>, Coauthor Name</p><p class="venue">Conference or Journal Name</p><div class="pub-links"><a href="#">PDF</a><a href="#">Code</a><a href="#">DOI</a></div></div> -->
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="section-label"><span>03</span><h2>Education</h2></div>
+      <div class="section-content timeline">
+        <article><p class="timeline-date">2021 — 2026</p><div><h3>KAIST</h3><p>B.S. in Computer Science and Mathematics(GPA: 3.9/4.3)</p></div></article>
+      </div>
+    </section>
+
+    <section class="page-section last-section">
+      <div class="section-label"><span>04</span><h2>News</h2></div>
+      <div class="section-content news-list">
+        <!-- <p><time datetime="2026-01">Jan 2026</time><span>새로운 소식이나 학술 활동을 한 줄로 기록해주세요.</span></p>
+        <p><time datetime="2025-01">Jan 2025</time><span>새로운 소식이나 학술 활동을 한 줄로 기록해주세요.</span></p>-->
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>© 2026 Hojune Lee. <a href="https://github.com/hojune-lee/hojune-lee.github.io">Source</a></p>
-    </div>
+  <footer class="site-footer container">
+    <p>© 2026 Hojune Lee</p>
+    <p>Last updated July 2026</p>
   </footer>
+  <script src="assets/site.js"></script>
 </body>
 </html>
