@@ -123,7 +123,7 @@ h1, h2, h3, p { margin-top: 0; }
   color: rgba(34,95,77,.11);
   font: 600 clamp(90px, 16vw, 190px)/.8 var(--serif);
   letter-spacing: -.09em;
-  content: "HL";
+  content: "";
 }
 .intro-main { position: relative; z-index: 1; max-width: 710px; }
 .kicker, .card-meta {
