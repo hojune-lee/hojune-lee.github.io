@@ -1,83 +1,71 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hojune Lee's academic website">
+  <meta name="description" content="Hojune Lee — research interests in quantum information, theoretical computer science, and cryptography. Publications and education.">
+  <meta name="theme-color" content="#fdfcf9">
   <title>Hojune Lee</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header class="site-header container">
-    <a class="site-name" href="index.html">Hojune Lee</a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-    <nav id="nav" class="site-nav" aria-label="주요 메뉴">
-      <a href="index.html" aria-current="page">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-    </nav>
-  </header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <main class="container">
-    <section class="intro">
-      <div class="intro-main">
-        <p class="kicker">KAIST · Computer Science & Mathematics</p>
-        <h1>이호준 <span>Hojune Lee</span></h1>
-        <p class="lead">I enjoy mathematics in many forms. In my spare time, I swim. </p>
-        <div class="link-list" aria-label="외부 링크">
-          <a href="mailto:hojunelee@kaist.ac.kr">Email</a>
-          <a href="https://github.com/hojune-lee" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://blog.naver.com/maxio_" target="_blank" rel="noopener">Blog</a>
-          <a href="cv.pdf">CV</a>
+  <div class="page">
+    <header class="site-header">
+      <div class="identity">
+        <h1>Hojune Lee <span lang="ko">이호준</span></h1>
+        <p>Computer Science &amp; Mathematics · KAIST</p>
+      </div>
+      <address class="contact">
+        <a href="mailto:hojunelee@kaist.ac.kr">hojunelee@kaist.ac.kr</a>
+        <div class="elsewhere">
+          <a href="https://github.com/hojune-lee">GitHub</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://blog.naver.com/maxio_">Blog</a>
         </div>
-      </div>
-    </section>
+      </address>
+    </header>
 
-    <section id="research" class="page-section">
-      <div class="section-label"><span>01</span><h2>Research interests</h2></div>
-      <div class="section-content">
-        <ul class="interest-list">
-          <li><span>Quantum Information Theory</span><div class="interest-body"><p>Representation Theory for Quantum, Clifford Group</p><div class="research-resources"><p>References</p><a href="https://link.springer.com/book/10.1007/978-3-319-44906-7">Representation Theory <span>PDF ↗</span></a><a href="https://arxiv.org/abs/2003.09412">Clifford Generation <span>PDF ↗</span></a></div></div></li>
-          <li><span>Theoritical Computing</span><div class="interest-body"><p>Computation Theory</p><div class="research-resources"><p>References</p><a href="https://theory.cs.princeton.edu/complexity/book.pdf"> Computational Complexity <span>PDF ↗</span></a></div></div></li>
-          <li><span>Cryptography</span><div class="interest-body"><p></p><div class="research-resources"><p>References</p><a href="#">Trapdoored Matrices <span>Link ↗</span></a></div></div></li>
-          <li><span>Mathematics</span><div class="interest-body"><p>Various Topics in Mathematics</p><div class="research-resources"><p>References</p><a href="https://people.math.ethz.ch/~acannas/Papers/lsg.pdf">Symplectic Geometry <span>PDF ↗</span></a></div></div></li>
-        </ul>
-      </div>
-    </section>
+    <main id="main">
+      <section id="research" class="about" aria-label="About me and research interests">
+        <p>I studied computer science and mathematics at KAIST. My research interests lie in quantum information, theoretical computer science, and cryptography. I am particularly interested in representation theory and the Clifford group.</p>
+        <p>I enjoy mathematics in many forms. In my spare time, I swim.</p>
+      </section>
 
-    <section id="publications" class="page-section">
-      <div class="section-label"><span>02</span><h2>Publications</h2></div>
-      <div class="section-content publication-list">
-        <article class="publication">
-          <p class="pub-year">2026</p>
-          <!-- <div><h3>Paper title</h3><p><strong>Hojune Lee</strong>, Coauthor Name</p><p class="venue">Conference or Journal Name</p><div class="pub-links"><a href="#">PDF</a><a href="#">Code</a><a href="#">DOI</a></div></div> -->
+      <section id="publications" class="section" aria-labelledby="publications-heading">
+        <h2 id="publications-heading">Publications &amp; preprints</h2>
+        <article class="entry publication" aria-labelledby="paper-title">
+          <p class="entry-date">2026</p>
+          <div>
+            <h3 id="paper-title"><a href="https://arxiv.org/abs/2610.01848">Trapdoored Clifford Operators and Applications</a></h3>
+            <p>Minki Hhan and <strong>Hojune Lee</strong></p>
+            <p class="publication-note">Preprint · arXiv:2610.01848</p>
+            <div class="paper-links" role="group" aria-label="Paper links">
+              <a href="https://arxiv.org/abs/2610.01848">arXiv</a>
+              <a href="https://arxiv.org/pdf/2610.01848">PDF</a>
+            </div>
+          </div>
         </article>
-      </div>
-    </section>
+      </section>
 
-    <section class="page-section">
-      <div class="section-label"><span>03</span><h2>Education</h2></div>
-      <div class="section-content timeline">
-        <article><p class="timeline-date">2021 — 2026</p><div><h3>KAIST</h3><p>B.S. in Computer Science and Mathematics(GPA: 3.9/4.3)</p></div></article>
-      </div>
-    </section>
+      <section id="education" class="section" aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <div class="entry education">
+          <p class="entry-date">2021–2026</p>
+          <div>
+            <h3>KAIST</h3>
+            <p>B.S. in Computer Science and Mathematics</p>
+            <p class="education-note">GPA: 3.9/4.3</p>
+          </div>
+        </div>
+      </section>
+    </main>
 
-    <section class="page-section last-section">
-      <div class="section-label"><span>04</span><h2>News</h2></div>
-      <div class="section-content news-list">
-        <!-- <p><time datetime="2026-01">Jan 2026</time><span>새로운 소식이나 학술 활동을 한 줄로 기록해주세요.</span></p>
-        <p><time datetime="2025-01">Jan 2025</time><span>새로운 소식이나 학술 활동을 한 줄로 기록해주세요.</span></p>-->
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer container">
-    <p>© 2026 Hojune Lee</p>
-    <p>Last updated July 2026</p>
-  </footer>
-  <script src="assets/site.js"></script>
+    <footer class="site-footer">
+      <p>Last updated <time datetime="2026-10">October 2026</time></p>
+    </footer>
+  </div>
 </body>
 </html>
