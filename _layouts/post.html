@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<article class="blog-post">
+  <header class="post-header">
+    <a class="back-link" href="{{ '/blog/' | relative_url }}" lang="en">&larr; Blog</a>
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <p class="post-date" lang="en"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time></p>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {% if page.previous or page.next %}
+  <nav class="post-navigation" aria-label="Other posts" lang="en">
+    {% if page.previous %}
+    <a class="post-navigation-older" href="{{ page.previous.url | relative_url }}" rel="prev">
+      <span lang="en">Older post</span>
+      <bdi lang="{{ page.previous.lang | default: site.lang | escape }}">{{ page.previous.title | escape }}</bdi>
+    </a>
+    {% endif %}
+    {% if page.next %}
+    <a class="post-navigation-newer" href="{{ page.next.url | relative_url }}" rel="next">
+      <span lang="en">Newer post</span>
+      <bdi lang="{{ page.next.lang | default: site.lang | escape }}">{{ page.next.title | escape }}</bdi>
+    </a>
+    {% endif %}
+  </nav>
+  {% endif %}
+</article>

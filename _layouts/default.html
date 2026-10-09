@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | escape }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% assign page_description = page.description | default: page.excerpt | default: site.description %}
+  <meta name="description" content="{{ page_description | strip_html | normalize_whitespace | escape }}">
+  <meta name="theme-color" content="#fdfcf9">
+  <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  {% if page.css == 'blog' or page.layout == 'post' %}
+  <link rel="stylesheet" href="{{ '/assets/blog.css' | relative_url }}">
+  {% endif %}
+</head>
+<body>
+  <a class="skip-link" href="#main" lang="en">Skip to content</a>
+
+  <div class="page">
+    <header class="site-header" lang="en">
+      <div class="identity">
+        {% if page.home %}
+        <h1 class="site-title">Hojune Lee <span lang="ko">이호준</span></h1>
+        {% else %}
+        <p class="site-title"><a href="{{ '/' | relative_url }}">Hojune Lee <span lang="ko">이호준</span></a></p>
+        {% endif %}
+        <p class="affiliation">Computer Science &amp; Mathematics · KAIST</p>
+      </div>
+      <div class="contact">
+        <a href="mailto:{{ site.email | escape }}">{{ site.email | escape }}</a>
+        <div class="elsewhere">
+          <a href="{{ site.scholar_url | escape }}">Google Scholar</a>
+          <span aria-hidden="true">·</span>
+          <a href="{{ site.github_url | escape }}">GitHub</a>
+        </div>
+        <nav class="elsewhere" aria-label="Blog links">
+          <a href="{{ '/blog/' | relative_url }}"{% if page.url == '/blog/' %} aria-current="page"{% endif %}>Blog</a>
+          <span aria-hidden="true">·</span>
+          <a href="{{ site.naver_blog_url | escape }}">Naver blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer" lang="en">
+      <p>Last updated <time datetime="{{ site.time | date: '%Y-%m' }}">{{ site.time | date: '%B %Y' }}</time></p>
+    </footer>
+  </div>
+</body>
+</html>

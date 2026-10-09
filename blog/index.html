@@ -1,0 +1,32 @@
+---
+layout: default
+title: Blog
+description: Notes and essays by Hojune Lee.
+css: blog
+---
+<section class="blog" aria-labelledby="blog-heading">
+  <header class="blog-header">
+    <h1 class="blog-title" id="blog-heading">Blog</h1>
+    <p class="blog-intro">Notes and essays.</p>
+  </header>
+
+  {% if site.posts.size > 0 %}
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <article class="post-list-entry">
+        <p class="post-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y' }}</time></p>
+        <div lang="{{ post.lang | default: site.lang | escape }}">
+          <h2 class="post-list-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+          {% if post.description %}
+          <p class="post-summary">{{ post.description | escape }}</p>
+          {% endif %}
+        </div>
+      </article>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="blog-empty">No posts yet.</p>
+  {% endif %}
+</section>

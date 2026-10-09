@@ -1,0 +1,34 @@
+title: Hojune Lee
+description: Research interests in quantum information, theoretical computer science, and cryptography. Publications, education, and writing.
+url: https://hojune-lee.github.io
+baseurl: ""
+lang: en
+timezone: Asia/Seoul
+email: hojunelee@kaist.ac.kr
+github_url: https://github.com/hojune-lee
+scholar_url: https://scholar.google.co.kr/citations?user=OJ76OSwAAAAJ&hl=ko&oi=ao
+naver_blog_url: https://blog.naver.com/maxio_
+
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+future: false
+show_drafts: false
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      css: blog
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
